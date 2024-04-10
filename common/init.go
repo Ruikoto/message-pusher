@@ -12,7 +12,7 @@ import (
 var (
 	PrintVersion = flag.Bool("version", false, "Print the version of the program and exits.")
 	PrintHelp    = flag.Bool("help", false, "Print the help message and exits.")
-	Port         = flag.Int("port", 3000, "Specify the listening port. Default is 3000.")
+	Port         = flag.Int("port", 443, "Specify the listening port. Default is 3000.")
 	LogDir       = flag.String("log-dir", "", "Specify the directory for log files.")
 )
 

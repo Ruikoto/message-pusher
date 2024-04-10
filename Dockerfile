@@ -20,12 +20,12 @@ RUN go build -ldflags "-s -w -X 'message-pusher/common.Version=$(cat VERSION)' -
 
 FROM alpine
 
-ENV PORT=3000
+ENV PORT=443
 RUN apk update \
     && apk upgrade \
     && apk add --no-cache ca-certificates tzdata \
     && update-ca-certificates 2>/dev/null || true
 COPY --from=builder2 /build/message-pusher /
-EXPOSE 3000
+EXPOSE 443
 WORKDIR /data
 ENTRYPOINT ["/message-pusher"]

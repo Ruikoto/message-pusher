@@ -9,7 +9,7 @@ import (
 var StartTime = time.Now().Unix() // unit: second
 var Version = "v0.0.0"
 var SystemName = "消息推送服务"
-var ServerAddress = "http://localhost:3000"
+var ServerAddress = "http://localhost:443"
 var Footer = ""
 var HomePageLink = ""
 var MessageCount = 0 // Non critical value, no need to use atomic
